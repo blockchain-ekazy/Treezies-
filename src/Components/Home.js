@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Mintbtn from "./mintbtn.js";
 import "./Home.css";
 
 import Fade from "react-reveal/Fade";
@@ -8,25 +9,31 @@ import Zoom from "react-reveal/Zoom";
 
 import Mbgr from "./Imgs/mrbg.png";
 import teampng from "./Imgs/teampng.png";
+import teampng1 from "./Imgs/sam_profile_pic.png";
+import teampng2 from "./Imgs/greg_profile_pic.jpeg.jpg";
+import teampng3 from "./Imgs/falcon_profile_pic.jpeg.jpg";
+import teampng4 from "./Imgs/Ron_profile_pic.jpeg.jpg";
+import bg from "./Imgs/Heaven.png";
 import dividerfooter from "./Imgs/dividerfooter.png";
 import divider from "./Imgs/divider.png";
 
 export default function Home() {
-  // let i = 0;
-  // useEffect(() => {
-  //     setInterval(function(){
-  //         console.log(i);
-  //         document.getElementsByClassName('Dis')[0].style.backgroundPositionX = i + 'px';
-  //         i+=1;
-  //     }, 30);
-  // });
+  let i = 0;
+  useEffect(() => {
+    setInterval(function () {
+      //   console.log(i);
+      document.getElementsByClassName("font")[0].style.backgroundPositionX =
+        i + "px";
+      i += 1;
+    }, 30);
+  });
 
   return (
     <div className="font">
       <div className="container-fluid home ">
         <div className="Overlay">
           <Fade buttom>
-            <div className="container-fluid navbgo">
+            <div className="container-fluid navbgo gyu">
               <nav className="navbar  container navbar-expand-lg navbar-dark navv">
                 <div class="container-fluid">
                   <a class="navbar-brand d-block d-md-none" href="#">
@@ -41,7 +48,7 @@ export default function Home() {
                   >
                     <span class="navbar-toggler-icon"></span>
                   </button>
-                  <div class="collapse navbar-collapse" id="mob-navbar">
+                  <div class="collapse navbar-collapse " id="mob-navbar">
                     <ul class="navbar-nav mb-2 mb-lg-0 ">
                       {/* <li class="nav-item">
                                                 <a class="nav-link" aria-current="page" href="/">Home</a>
@@ -67,12 +74,28 @@ export default function Home() {
                     </ul>
                     <form class="d-flex btnns">
                       <div class="social-buttons text-center">
-                        <button class="neo-button">
+                        <a
+                          target="_blank"
+                          class="neo-button"
+                          href="https://discord.com/invite/HB7u6JwyvJ"
+                        >
                           <i class="buttons fab fa-discord  text-white"></i>
-                        </button>
-                        <button class="neo-button">
-                          <i class="fa fa-twitter "></i>
-                        </button>
+                        </a>
+
+                        <a
+                          target="_blank"
+                          class="neo-button pl-4"
+                          href="https://twitter.com/treeziesnft"
+                        >
+                          <i class="fab fa-twitter "></i>
+                        </a>
+                        <a
+                          target="_blank"
+                          class="neo-button pl-4"
+                          href="https://www.instagram.com/treeziesnft/"
+                        >
+                          <i class="fab fa-instagram"></i>
+                        </a>
                       </div>
                     </form>
                   </div>
@@ -99,10 +122,8 @@ export default function Home() {
               </div>
               <Fade top>
                 <div className="text-center  mb-5 pb-5">
-                  <br></br>
-                  <button type="button" class="Wbtn btn mb-5 btn-lg px-2 ">
-                    CONNECT YOUR WALLET
-                  </button>
+                  {/* <Mintbtn /> */}
+                  <button className="btn4">Connect Wallet</button>
                 </div>
               </Fade>
             </div>
@@ -133,7 +154,9 @@ export default function Home() {
                           <div class="timeline-icon">
                             <i class="fa fa-globe"></i>
                           </div>
-                          <div class="timeline-year"> 1 </div>
+                          <div class="timeline-year pt-1">
+                            <i className="fa fa-check"></i>
+                          </div>
                           <div class="inner-content">
                             <h3 class="title">Phase - 1 Planting the seed</h3>
                             <p class="description">
@@ -247,12 +270,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container-fluid px-0">
+      <div className="container-fluid mt-5 m-0 p-0">
         <img src={divider} className="d-block" style={{ width: "100%" }} />
       </div>
 
-      <div className="bbb pt-5">
-        <div className="container">
+      <div className="bbbb pt-5">
+        <div className="container ">
           <div class="container">
             <a id="Faq"></a>
 
@@ -305,7 +328,7 @@ export default function Home() {
                       aria-labelledby="headingOne"
                     >
                       <div class="panel-body">
-                        <p className="text-white">
+                        <p className=" loi text-white">
                           Treezies are a collection of 7,777 randomly generated
                           non-fungible tokens, AKA "NFTs." Treezies are
                           generated from a smart contract using over 100
@@ -342,7 +365,7 @@ export default function Home() {
                       aria-labelledby="headingTwo"
                     >
                       <div class="panel-body text-white">
-                        <p>
+                        <p className="loi">
                           Treezies will be available to mint at .0777 ETH + gas.
                         </p>
                       </div>
@@ -373,9 +396,9 @@ export default function Home() {
                       aria-labelledby="headingThree"
                     >
                       <div class="panel-body text-white">
-                        <p>
-                          Treezies will be available to mint on April 7th, 2022.
-                          Please check the discord for any updates.
+                        <p className="loi">
+                          Please check the Discord for any updates regarding
+                          release day
                         </p>
                       </div>
                     </div>
@@ -405,7 +428,7 @@ export default function Home() {
                       aria-labelledby="headingFour"
                     >
                       <div class="panel-body text-white">
-                        <p>
+                        <p className="loi">
                           Please check the Discord for the status of whitelist
                           and instructions on how to earn your spot. As a
                           general rule of thumb, we will be rewarding the most
@@ -441,7 +464,7 @@ export default function Home() {
                       aria-labelledby="headingFive"
                     >
                       <div class="panel-body text-white">
-                        <p>
+                        <p className="loi">
                           We have partnered with raritytools.io to create the
                           rankings of all Treezies. Ranking will be released
                           shortly after mint day.
@@ -474,7 +497,7 @@ export default function Home() {
                       aria-labelledby="headingFive"
                     >
                       <div class="panel-body text-white">
-                        <p>
+                        <p className="loi">
                           Treezies provides an unparalleled community and
                           network of like minded individuals. Additionally, it
                           provides the opportunity to get involved in the
@@ -514,12 +537,14 @@ export default function Home() {
                       aria-labelledby="headingFive"
                     >
                       <div class="panel-body text-white">
-                        <p>
+                        <p className="loi">
                           177 Treezies will be held for giveaways and promotion
                           to help further cultivate the Treezies community.
                         </p>
                       </div>
                     </div>
+                  </div>
+                  <div class="panel panel-default">
                     <Fade>
                       <div class="panel-heading" role="tab" id="headingFive">
                         <h4 class="panel-title text-white">
@@ -544,7 +569,7 @@ export default function Home() {
                       aria-labelledby="headingFive"
                     >
                       <div class="panel-body text-white">
-                        <p>
+                        <p className="loi">
                           We have worked closely with our development team to
                           optimize our smart contract and release process to
                           ensure no waste of ETH to high gas prices, as that is
@@ -552,6 +577,8 @@ export default function Home() {
                         </p>
                       </div>
                     </div>
+                  </div>
+                  <div class="panel panel-default">
                     <Fade>
                       <div class="panel-heading" role="tab" id="headingFive">
                         <h4 class="panel-title text-white">
@@ -576,7 +603,7 @@ export default function Home() {
                       aria-labelledby="headingFive"
                     >
                       <div class="panel-body text-white">
-                        <p>
+                        <p className="loi">
                           Royalties will start at 5% to help with ongoing costs,
                           however we hope to lower this over time.
                         </p>
@@ -588,7 +615,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
         <a id="Team"></a>
 
         <div className="container  py-5">
@@ -609,12 +635,12 @@ export default function Home() {
                     <div className=" w-100 heading ">
                       <img
                         className="d-block w-100 rounded "
-                        src={teampng}
+                        src={teampng1}
                         alt="First slide"
                       ></img>
                       <h3 className="text-white text-center pt-3 mb-0">Sam</h3>
                       <p className="text-white text-center mb-2">Founder</p>
-                      <p className="text-white text-center px-2 ">
+                      <p className="text-dark text-center px-2 ">
                         <small>
                           An extremely experienced and knowledgeable member of
                           the crypto community Sam has been involved with
@@ -636,12 +662,12 @@ export default function Home() {
                     <div className=" w-100 heading ">
                       <img
                         className="d-block w-100 rounded "
-                        src={teampng}
+                        src={teampng2}
                         alt="First slide"
                       ></img>
                       <h3 className="text-white text-center pt-3 mb-0">Greg</h3>
                       <p className="text-white text-center mb-2">Developer</p>
-                      <p className="text-white text-center px-2 ">
+                      <p className="text-dark text-center px-2 ">
                         <small>
                           Involved in smart contract technology development for
                           nearly a decade, Greg knows all the ins and outs of
@@ -657,22 +683,23 @@ export default function Home() {
                   </div>
                 </Fade>
               </div>
+
               <div className="col-12 col-md-4 thing py-3 ">
                 <Fade bottom>
                   <div className="teamwrap pb-3 rounded px-1">
                     <div className=" w-100 heading ">
                       <img
                         className="d-block w-100 rounded "
-                        src={teampng}
+                        src={teampng3}
                         alt="First slide"
                       ></img>
                       <h3 className="text-white text-center pt-3 mb-0">
                         Falcon
                       </h3>
-                      <p className="text-white text-center mb-2">
+                      <p className=" text-center mb-2">
                         Head of Marketing<br></br>and Promotion
                       </p>
-                      <p className="text-white text-center px-2 ">
+                      <p className="text-dark text-center px-2 ">
                         <small>
                           With a long history of marketing and sales, Falcon
                           leads the marketing efforts for Treezies. He has
@@ -696,14 +723,14 @@ export default function Home() {
                     <div className=" w-100 heading ">
                       <img
                         className="d-block w-100 rounded "
-                        src={teampng}
+                        src={teampng4}
                         alt="First slide"
                       ></img>
                       <h3 className="text-white text-center pt-3 mb-0">Ron</h3>
                       <p className="text-white text-center mb-2">
                         Community Outreach<br></br>and Manager
                       </p>
-                      <p className="text-white text-center px-2 ">
+                      <p className="text-dark  text-center px-2 ">
                         <small>
                           Skilled Discord Moderator with lengthy experience
                           bringing people together. Ron has started a variety of
@@ -723,7 +750,10 @@ export default function Home() {
                 <Fade bottom>
                   <div className="teamwrap pb-3 rounded px-1">
                     <div className=" w-100 heading ">
-                      <a href="https://www.linkedin.com/in/sabirpro/">
+                      <a
+                        href="https://www.linkedin.com/in/sabirpro/"
+                        target="_blank"
+                      >
                         <img
                           className="d-block w-100 rounded "
                           src={teampng}
@@ -732,8 +762,10 @@ export default function Home() {
                         <h3 className="text-white text-center pt-3 mb-0">
                           Sabirpro
                         </h3>
-                        <p className="text-white text-center mb-2">Developer</p>
-                        <p className="text-white text-center px-2 ">
+                        <p className="text-white text-center mb-2">
+                          Website & Smart Contract Developer
+                        </p>
+                        <p className="text-dark text-center px-2 ">
                           <small>
                             Having been a blockchain full stack developer for
                             over 5 years Sabir has seen many projects come and
@@ -756,16 +788,42 @@ export default function Home() {
 
         <br></br>
         {/* <hr className='text-white' ></hr> */}
-        <img src={dividerfooter} className="w-100" />
+        {/* <img src={dividerfooter} className="w-100" /> */}
         <div className=" footer text-center py-2 text-white  ">
           <p>
-            <i className="fab fa-discord Footer px-1"></i>{" "}
-            <i className=" px-1 Footer fab fa-twitter"></i>{" "}
-            <span className="px-1 Footer">© 2022, Treezies NFTs</span>{" "}
+            <a
+              class="neo-button"
+              target="_blank"
+              href="https://discord.com/invite/HB7u6JwyvJ"
+            >
+              <i className="fab fa-discord Footer px-1"></i>{" "}
+            </a>
+            <a
+              class="neo-button"
+              target="_blank"
+              href="https://twitter.com/treeziesnft"
+            >
+              <i className=" px-1 Footer fab fa-twitter"></i>{" "}
+            </a>
+            <a
+              class="neo-button"
+              target="_blank"
+              href="https://www.instagram.com/treeziesnft/"
+            >
+              <i className=" px-1 Footer fab fa-instagram"></i>{" "}
+            </a>
+            <a
+              target="_blank"
+              href="https://onetreeplanted.org/blogs/stories/how-much-co2-does-tree-absorb"
+            >
+              <span className="px-1 Footer text-white">
+                © 2022, Resources and Education
+              </span>
+            </a>
           </p>
-          <p></p>
         </div>
       </div>
+
       <script>
         document.getElementsByClassName('font')[0].onscroll(console.log("fbgv"));
         {/* document.getElementsByTagName("body")[0].onscroll() */}

@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+* {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .navbgo {
   background-color: #0000001f;
 }
@@ -70,7 +78,7 @@ h6 {
   color: #b0d686 !important;
   /* color: #00a3d8 !important; */
   font-weight: 900;
-  letter-spacing: 9.03px;
+  letter-spacing: 2px;
 }
 
 p {
@@ -83,11 +91,12 @@ p {
   background-color: #00000078;
   padding-left: 200px;
 }
-body {
-  background-image: url(../Components/Imgs/mainbg.gif);
+.font {
+  background-image: url(../Components/Imgs/clouds.png);
+  background-color: #00b4ff;
   /* background-repeat: no-repeat; */
-  /* background-size: cover; */
-  background-position-x: right;
+  background-size: contain;
+  /* background-position-x: right; */
 }
 .home {
   /* background-color: black; */
@@ -151,7 +160,7 @@ body {
   /* background-color: #79b446ed; */
 }
 .bbb {
-  background-color: #c7844d;
+  background-color: #fbeac0;
 }
 .bbb h1 {
   color: #deb887 !important;
@@ -819,6 +828,9 @@ a:hover,a:focus{
   top: -2px;
   position: relative;
 }
+script + iframe {
+  display: none;
+}
 .main-timeline .timeline.lasttimeline::after {
   content: none !important;
 }
@@ -831,11 +843,64 @@ a:hover,a:focus{
   }
 }
 .teamwrap {
-  background-color: #b0b0b0;
+  background-color: #a9ff6a;
   box-shadow: 0 0 40px -20px #0003;
   height: 100%;
+  padding: 0 0 15px !important;
 }
 .teamwrap h3 + p {
   color: #ab6a35 !important;
   font-weight: 700;
+}
+.teamwrap h3 + p + p {
+  padding: 0 20px !important;
+}
+/* .home {
+  background-image: url(../Components/Imgs/Heaven.png);
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position-x: right;
+}
+.Dis {
+  background-image: url(../Components/Imgs/Morning.png);
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position-x: right;
+}
+.bbb{
+  background-image: url(../Components/Imgs/Sunset.png);
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position-x: right;
+} */
+.loi {
+  /* color: #c7844d; */
+}
+.bbbb {
+  background-image: url(../Components/Imgs/Desert.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: right;
+  background-color: #c7844d;
+  background-blend-mode: darken;
+}
+.gyu {
+  background-image: linear-gradient(150deg, #ab6a35, #79b446);
+}
+.btn4 {
+  font-family: "Poppins";
+  font-size: 22px;
+  color: white;
+  background-color: #c7844d;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #79b446;
+  border-radius: 50px;
+}
+.BtnDiv {
+  max-width: 450px;
 }

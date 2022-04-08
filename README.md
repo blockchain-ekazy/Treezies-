@@ -1,11 +1,8 @@
-## A![Treezies](https://user-images.githubusercontent.com/100062048/155753198-3e8da9cf-bb51-4e9a-9044-29084860146f.png)
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-vailable Scripts
+## Available Scripts
 
 In the project directory, you can run:
 
